@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -43,11 +44,11 @@ header{padding:14px 22px;display:flex;align-items:center;justify-content:space-b
 .logo span{display:block;font-family:var(--fb);font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-l);margin-top:2px}
 .back{font-size:13px;color:var(--ink-l);text-decoration:none}
 .back:hover{color:var(--sage-d)}
-.container{max-width:720px;margin:0 auto;padding:0 22px}
-.page-hero{padding:48px 22px 36px;background:var(--white);border-bottom:1px solid var(--bdr)}
+.container{width:min(820px,calc(100% - 40px));margin:0 auto}
+.page-hero{padding:48px 0 36px;background:var(--white);border-bottom:1px solid var(--bdr)}
 .page-hero h1{font-family:var(--fd);font-size:clamp(22px,4vw,32px);font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.25}
 .page-hero p{font-size:14px;color:var(--ink-l);font-weight:300}
-.content{padding:36px 22px 64px}
+.content{padding:36px 0 64px}
 .section{margin-bottom:36px}
 .section h2{font-family:var(--fd);font-size:19px;font-weight:500;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--bdr)}
 .section h3{font-size:14px;font-weight:500;color:var(--ink);margin:14px 0 8px;text-transform:uppercase;letter-spacing:.04em}
@@ -145,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>номери відділень для доставки;</li>
         <li>інформація, отримана в результаті маркетингової діяльності.</li>
       </ul>
-      <p>3.2.2.4. Дані, які автоматично передаються Інтернет-магазину через програмне забезпечення пристрою (Meta Pixel, Microsoft Clarity):</p>
+      <p>3.2.2.4. Дані, які автоматично передаються Інтернет-магазину через програмне забезпечення пристрою (Meta Pixel, Microsoft Clarity) та під час оформлення замовлення через Meta Conversions API:</p>
       <ul>
         <li>IP-адреса пристрою Користувача;</li>
         <li>тип та версія браузера;</li>
@@ -174,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><strong>Nova Poshta</strong> — для здійснення доставки замовлення;</li>
         <li><strong>NovaPay / банківські установи</strong> — для проведення платіжних операцій;</li>
         <li><strong>Google LLC</strong> — для зберігання замовлень у Google Sheets;</li>
-        <li><strong>Meta Platforms (Facebook/Instagram)</strong> — знеособлені дані для аналітики реклами;</li>
+        <li><strong>Meta Platforms (Facebook/Instagram)</strong> — дані про покупку, IP-адреса, дані браузера, ідентифікатори cookie, а також ім'я та телефон у вигляді SHA-256 хешів для вимірювання ефективності реклами та зіставлення подій Meta Pixel і Conversions API;</li>
         <li><strong>Microsoft (Clarity)</strong> — знеособлені дані аналітики сайту;</li>
         <li>архівним установам та особам, що надають послуги зберігання інформації;</li>
         <li>правоохоронним та компетентним державним органам на їх законний запит.</li>

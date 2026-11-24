@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -59,8 +60,7 @@ body{background:var(--bg);color:var(--ink);font:300 17px/1.7 var(--fb);-webkit-f
 img{display:block;max-width:100%}
 a{color:inherit}
 strong,b{font-weight:600}
-.w{width:min(1080px,calc(100% - 40px));margin:auto}
-.col{width:min(700px,calc(100% - 40px));margin:auto}
+.w,.col{width:min(820px,calc(100% - 40px));margin:auto}
 h1,h2,h3{font-family:var(--fd);font-weight:500;line-height:1.15;letter-spacing:-.01em}
 h1{font-size:clamp(34px,5.4vw,54px)}
 h2{font-size:clamp(28px,3.8vw,40px);margin:0 0 18px}
@@ -126,7 +126,7 @@ p{margin:0 0 18px}
 /* mechanism: day timeline */
 .mech{padding:70px 0;background:var(--bg2)}
 .mech .col>p{font-size:18px}
-.timeline{margin:34px auto 10px;width:min(980px,calc(100% - 40px))}
+.timeline{margin:34px auto 10px;width:min(820px,calc(100% - 40px))}
 .tl-bar{position:relative;height:120px;border-radius:16px;overflow:hidden;background:linear-gradient(90deg,#f6efe2 0%,#f3dcc4 45%,#e9b996 72%,#c4622e 86%,#2c3a48 100%)}
 .tl-bar svg{position:absolute;inset:0;width:100%;height:100%}
 .tl-labels{display:flex;justify-content:space-between;font:500 13px var(--fb);color:var(--ink-m);margin-top:10px}
@@ -177,14 +177,16 @@ p{margin:0 0 18px}
 
 /* reviews */
 .reviews{padding:74px 0}
-.rv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:26px;align-items:start}
-.rv{background:var(--white);border:1px solid var(--bdr);border-radius:18px;overflow:hidden}
-.rv img{width:100%;height:auto}
+.rv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px;align-items:stretch}
+.rv{display:flex;flex-direction:column;min-width:0;background:var(--white);border:1px solid var(--bdr);border-radius:18px;overflow:hidden}
+.rv-media{position:relative;aspect-ratio:3/4;background:var(--bg2);overflow:hidden}
+.rv img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .rv figcaption{padding:12px 16px;font-size:13px;color:var(--ink-l);border-top:1px solid var(--bdr)}
 .rv figcaption b{color:var(--ink);font-weight:500}
 .rv-sub{margin:40px 0 0}
 .rv-sub h3{font-size:20px}
 .rv-grid.small{grid-template-columns:repeat(2,1fr)}
+.rv-grid.small .rv-media{aspect-ratio:1}
 .rv-note{font-size:13px;color:var(--ink-l);margin-top:18px}
 
 /* offer */
@@ -231,7 +233,7 @@ p{margin:0 0 18px}
 footer{padding:34px 0 40px;font-size:13px;color:var(--ink-l);background:var(--bg)}
 footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 footer a{color:var(--ink-m)}
-.disclaimer{width:min(1080px,calc(100% - 40px));margin:0 auto;padding:20px 0 0;font-size:12.5px;color:var(--ink-l);border-top:1px solid var(--bdr)}
+.disclaimer{width:min(820px,calc(100% - 40px));margin:0 auto;padding:20px 0 0;font-size:12.5px;color:var(--ink-l);border-top:1px solid var(--bdr)}
 
 .mcta{display:none}
 @media(max-width:900px){
@@ -248,6 +250,8 @@ footer a{color:var(--ink-m)}
   body{font-size:16px}.hero{padding:34px 0 20px}.lead{font-size:17px}.story p,.mech .col>p,.scene .col p{font-size:17px}
   .quiz-bd{padding:20px}.quiz-hd{padding:18px 20px}.top-cta{display:none}
   .rv-grid,.rv-grid.small{grid-template-columns:1fr}
+  .rv-media,.rv-grid.small .rv-media{aspect-ratio:auto}
+  .rv img{position:static;height:auto}
   .pull{font-size:19px}
   .tl-bar{height:96px}
 }
@@ -430,14 +434,14 @@ footer a{color:var(--ink-m)}
     <p style="color:var(--ink-m)">Справжні дописи й повідомлення наших покупців — без редагування.</p>
   </div>
   <div class="rv-grid">
-    <figure class="rv"><img src="/img/reviews/sleep-potatok000.jpg" alt="Допис у Threads від potatok000 про чай Sleep Aid" loading="lazy" width="760" height="1004"><figcaption><b>@potatok000</b> · Threads · про Sleep Aid</figcaption></figure>
-    <figure class="rv"><img src="/img/reviews/calm-nattttaschkaaaa.jpg" alt="Сторіс від nattttaschkaaaa про чай Keep Calm" loading="lazy" width="760" height="1374"><figcaption><b>@nattttaschkaaaa</b> · Instagram · про Keep Calm</figcaption></figure>
+    <figure class="rv"><div class="rv-media"><img src="/img/reviews/sleep-potatok000.jpg" alt="Допис у Threads від potatok000 про чай Sleep Aid" loading="lazy" width="760" height="1004"></div><figcaption><b>@potatok000</b> · Threads · про Sleep Aid</figcaption></figure>
+    <figure class="rv"><div class="rv-media"><img src="/img/reviews/calm-nattttaschkaaaa.jpg" alt="Сторіс від nattttaschkaaaa про чай Keep Calm" loading="lazy" width="760" height="1374"></div><figcaption><b>@nattttaschkaaaa</b> · Instagram · про Keep Calm</figcaption></figure>
   </div>
   <div class="rv-sub">
     <h3>Про інші чаї Leckar</h3>
     <div class="rv-grid small">
-      <figure class="rv"><img src="/img/reviews/women-liii-na.jpg" alt="Повідомлення від _liii_na.a_ про чай Herbs for Women" loading="lazy" width="760" height="654"><figcaption><b>@_liii_na.a_</b> · Instagram · про Herbs for Women</figcaption></figure>
-      <figure class="rv"><img src="/img/reviews/women-victoria-vkks.jpg" alt="Повідомлення від victoria_vkks про чай Herbs for Women" loading="lazy" width="760" height="909"><figcaption><b>@victoria_vkks</b> · Instagram · про Herbs for Women</figcaption></figure>
+      <figure class="rv"><div class="rv-media"><img src="/img/reviews/women-liii-na.jpg" alt="Повідомлення від _liii_na.a_ про чай Herbs for Women" loading="lazy" width="760" height="654"></div><figcaption><b>@_liii_na.a_</b> · Instagram · про Herbs for Women</figcaption></figure>
+      <figure class="rv"><div class="rv-media"><img src="/img/reviews/women-victoria-vkks.jpg" alt="Повідомлення від victoria_vkks про чай Herbs for Women" loading="lazy" width="760" height="909"></div><figcaption><b>@victoria_vkks</b> · Instagram · про Herbs for Women</figcaption></figure>
     </div>
   </div>
   <!-- TODO перед запуском: отримати дозвіл авторів на використання (DM в Instagram/Threads) -->
@@ -509,7 +513,7 @@ footer a{color:var(--ink-m)}
   <div class="w" style="margin-top:16px"><span>© 2026 Leckar · ФОП Ясько Владислав Леонідович</span><span><a href="/delivery">Доставка</a> · <a href="/return">Повернення</a> · <a href="/offer">Оферта</a> · <a href="/privacy">Конфіденційність</a> · <a href="/contacts">Контакти</a></span></div>
 </footer>
 
-<a class="btn mcta" id="mcta" href="#offer" data-track="mobile_cta">Обрати ритуал «День і Ніч»</a>
+<a class="btn mcta hide" id="mcta" href="#offer" data-track="mobile_cta">Обрати ритуал «День і Ніч»</a>
 
 <script>
 (function () {
@@ -534,12 +538,18 @@ footer a{color:var(--ink-m)}
   var bar = document.getElementById('progress');
   var mcta = document.getElementById('mcta');
   var offer = document.getElementById('offer');
-  addEventListener('scroll', function () {
+  var hero = document.querySelector('.hero');
+  var final = document.querySelector('.final');
+  function updateScrollUI() {
     var max = document.documentElement.scrollHeight - innerHeight;
     bar.style.width = (max > 0 ? scrollY / max * 100 : 0) + '%';
     var r = offer.getBoundingClientRect();
-    mcta.classList.toggle('hide', r.top < innerHeight && r.bottom > 0);
-  }, { passive: true });
+    var finalTop = final.getBoundingClientRect().top;
+    mcta.classList.toggle('hide', hero.getBoundingClientRect().bottom > 0 ||
+      (r.top < innerHeight && r.bottom > 0) || finalTop < innerHeight);
+  }
+  addEventListener('scroll', updateScrollUI, { passive: true });
+  updateScrollUI();
 
   /* тест-підбір */
   var steps = [].slice.call(document.querySelectorAll('.qstep'));

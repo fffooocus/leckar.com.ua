@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -43,11 +44,11 @@ header{padding:14px 22px;display:flex;align-items:center;justify-content:space-b
 .logo span{display:block;font-family:var(--fb);font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-l);margin-top:2px}
 .back{font-size:13px;color:var(--ink-l);text-decoration:none}
 .back:hover{color:var(--sage-d)}
-.container{max-width:660px;margin:0 auto;padding:0 22px}
-.page-hero{padding:48px 22px 40px;background:var(--white);border-bottom:1px solid var(--bdr)}
+.container{width:min(820px,calc(100% - 40px));margin:0 auto}
+.page-hero{padding:48px 0 40px;background:var(--white);border-bottom:1px solid var(--bdr)}
 .page-hero h1{font-family:var(--fd);font-size:clamp(26px,5vw,38px);font-weight:500;color:var(--ink);margin-bottom:8px}
 .page-hero p{font-size:15px;color:var(--ink-m);font-weight:300}
-.content{padding:40px 22px 60px}
+.content{padding:40px 0 60px}
 .section{margin-bottom:32px}
 .section h2{font-family:var(--fd);font-size:20px;font-weight:500;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--bdr)}
 .section p{font-size:14.5px;color:var(--ink-m);font-weight:300;line-height:1.75;margin-bottom:10px}
@@ -96,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Номер телефону</li>
         <li>Адреса доставки (місто, відділення або поштомат Nova Poshta)</li>
       </ul>
-      <p>Також автоматично збираються технічні дані через Meta Pixel та Microsoft Clarity: IP-адреса, тип пристрою, браузер, поведінка на сайті.</p>
+      <p>Також збираються технічні дані через Meta Pixel та Microsoft Clarity: IP-адреса, тип пристрою, браузер, поведінка на сайті. Під час оформлення замовлення Meta Conversions API отримує дані про покупку, IP-адресу, дані браузера, ідентифікатори cookie, а також ім'я та телефон у вигляді SHA-256 хешів.</p>
     </div>
 
     <div class="section">
@@ -105,7 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Обробка та доставка замовлення</li>
         <li>Зв'язок з вами щодо замовлення</li>
         <li>Покращення якості сайту та сервісу</li>
-        <li>Таргетована реклама через Meta Ads на основі знеособлених даних</li>
+        <li>Вимірювання ефективності реклами та показ реклами через Meta Ads</li>
       </ul>
     </div>
 
@@ -115,7 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li><strong>Nova Poshta</strong> — для здійснення доставки</li>
         <li><strong>Google</strong> — для зберігання замовлень у Google Sheets</li>
-        <li><strong>Meta (Facebook/Instagram)</strong> — знеособлені дані для аналітики реклами</li>
+        <li><strong>Meta (Facebook/Instagram)</strong> — дані про покупку та технічні дані для аналітики реклами, ім'я і телефон у вигляді SHA-256 хешів для зіставлення подій</li>
         <li><strong>Microsoft Clarity</strong> — знеособлені дані аналітики сайту</li>
       </ul>
       <p>Ми не продаємо і не передаємо ваші дані третім особам у комерційних цілях.</p>
